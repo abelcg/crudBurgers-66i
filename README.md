@@ -1,8 +1,22 @@
-# React + Vite
+# CRUD Hamburguesería
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En página web realizada con ReactJS de temática Hamburguesería, podremos mostrar productos en una tabla, darles de alta, editarlos y borraros. En la misma se utilizan herramientas como React Router para manejar las rutas que nos permitan navegar entre las distintas páginas y JSON Server para simular una API externa.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Demo
+
+## Comandos
+
+Cuando se clone este repositorio se deben ejecutar los siguientes comandos:
+
+### Para instalar las dependencias
+npm i 
+
+### Para ejecutar nuestra app de react
+npm run dev
+
+### Para ejecutar nuestra base de datos (ejecutarlo en otra terminal/consola aparte a la de react)
+json-server --watch db.json --port 3004
+
+
