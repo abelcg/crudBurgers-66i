@@ -6,11 +6,11 @@ const CardProduct = ({ product }) => {
   return (
     <div>
       <Card className="my-4">
-        <Card.Img className="img-fluid" variant="top" src={product.urlImg} />
+        <Card.Img className="img-fluid" variant="top" src={product?.urlImg} />
         <Card.Body>
           <div className="d-flex align-items-center justify-content-between mb-2">
             <Card.Title className="m-0 text-truncate">
-              {product.productName}
+              {product?.productName}
             </Card.Title>
             <span className="badge bg-yellow">New</span>
           </div>
@@ -19,9 +19,9 @@ const CardProduct = ({ product }) => {
             voluptate necessitatibus ex eius sunt!
           </Card.Text>
           <div className="d-flex align-items-center justify-content-between">
-            <p className="mb-0 ms-4 fs-4 ">${product.price}</p>
+            <p className="mb-0 ms-4 fs-4 ">${product?.price}</p>
             <Link
-              to={`/product/buy/${product._id}`}
+              to={`/product/buy/${product?.id}`}
               className="btn-gray text-decoration-none text-center"
             >
               Buy

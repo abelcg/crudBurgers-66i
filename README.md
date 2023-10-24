@@ -14,9 +14,9 @@ Cuando se clone este repositorio se deben ejecutar los siguientes comandos:
 npm i 
 
 ### Para ejecutar nuestra app de react
-npm run dev
+npm start
 
 ### Para ejecutar nuestra base de datos (ejecutarlo en otra terminal/consola aparte a la de react)
-json-server --watch db.json --port 3004
+json-server --watch db.json --port 3005
 
 
