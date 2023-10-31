@@ -10,6 +10,7 @@ import {
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import axios from '../../../config/axiosInit';
+import { STATUS } from '../../../constants';
 
 const ProductCreate = ({ URL, getApi }) => {
   //States
@@ -17,7 +18,7 @@ const ProductCreate = ({ URL, getApi }) => {
   const [price, setPrice] = useState(0);
   const [urlImg, setUrlImg] = useState('');
   const [category, setCategory] = useState(''); */
-  const STATUS_CREATED = 201;
+  //const STATUS_CREATED = 201;
   const navigate = useNavigate();
   //One general State
   const [inputs, SetInputs] = useState({});
@@ -88,7 +89,7 @@ const ProductCreate = ({ URL, getApi }) => {
 
           console.log(res);
 
-          if (res.status === STATUS_CREATED) {
+          if (res.status === STATUS.STATUS_CREATED) {
             Swal.fire(
               'Created',
               'Your product have been created successfully',

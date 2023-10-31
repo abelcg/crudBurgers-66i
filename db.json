@@ -8,13 +8,6 @@
       "id": 1
     },
     {
-      "productName": "Pulled pork sandwich",
-      "price": "850",
-      "urlImg": "https://images.pexels.com/photos/7181419/pexels-photo-7181419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-cerdo",
-      "id": 2
-    },
-    {
       "productName": "Chicken sandwich",
       "price": "830",
       "urlImg": "https://images.pexels.com/photos/5474836/pexels-photo-5474836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -71,13 +64,6 @@
       "id": 10
     },
     {
-      "productName": "Burger big",
-      "price": "1800",
-      "urlImg": "https://images.pexels.com/photos/1199956/pexels-photo-1199956.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "category": "de-carne",
-      "id": 11
-    },
-    {
       "productName": "Pork Sandwich",
       "price": "1250",
       "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -85,25 +71,11 @@
       "id": 13
     },
     {
-      "productName": "burger",
-      "price": "1111",
-      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-carne",
-      "id": 14
-    },
-    {
       "productName": "vegan burger",
       "price": "3233",
       "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
       "category": "veganas",
       "id": 15
-    },
-    {
-      "productName": "Meat burger",
-      "price": "2424",
-      "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "category": "de-carne",
-      "id": 16
     },
     {
       "productName": "Burger",
@@ -118,20 +90,6 @@
       "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
       "category": "de-carne",
       "id": 18
-    },
-    {
-      "productName": "Burger",
-      "price": "3233",
-      "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "category": "de-carne",
-      "id": 19
-    },
-    {
-      "productName": "Burger",
-      "price": "3233",
-      "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "category": "de-carne",
-      "id": 20
     }
   ]
 }
