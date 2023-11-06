@@ -30,6 +30,7 @@ const ProductCreate = ({ URL, getApi }) => {
    const { value, name } = event.target;
    //console.log(name, value);
    SetInputs((prevValues) => ({...prevValues,  [name]: value}))
+  
   }
 
 
