@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Container, Form } from 'react-bootstrap';
+import { Alert, Container, Form } from 'react-bootstrap';
 import { useState } from 'react';
 import {
   validateCategory,
@@ -22,6 +22,9 @@ const ProductCreate = ({ URL, getApi }) => {
   const navigate = useNavigate();
   //One general State
   const [inputs, SetInputs] = useState({});
+   //errors state
+   const [errorMessage, setErrorMessage] = useState(null);
+   const [show, setShow] = useState(false);
 
   const handleChange = (event)=>{
    //const value = event.target.value;
@@ -106,6 +109,14 @@ const ProductCreate = ({ URL, getApi }) => {
           }
         } catch (error) {
           console.log(error);
+          error.response.data?.message &&
+          setErrorMessage(error.response.data?.message);
+
+          error.response.data?.errors?.length > 0 &&
+          error.response.data.errors?.map((error) =>
+            setErrorMessage(error.msg)
+          );
+        setShow(true);
         }
       }
     });
@@ -170,6 +181,16 @@ const ProductCreate = ({ URL, getApi }) => {
             <button className='btn-yellow'>Save</button>
           </div>
         </Form>
+        {show && (
+        <Alert
+          key={errorMessage}
+          variant="danger"
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          {errorMessage}
+        </Alert>
+        )}
       </Container>
     </div>
   );
