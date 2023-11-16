@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import { Card, Row, Col, Container } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 
-const ProductDetails = ({ URL }) => {
+const ProductDetails = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
+  const URL = import.meta.env.VITE_API_HAMBURGUESERIA;
 
   useEffect(() => {
     getProductById();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getProductById = async () => {

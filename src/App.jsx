@@ -10,6 +10,7 @@ import ProductEdit from './components/views/productEdit/ProductEdit';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import axios from './config/axiosInit';
+import ProductDetails from './components/views/productDetails/ProductDetails';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           />
           <Route exact path='/product/create' element={<ProductCreate URL={URL} getApi={getApi} />} />
           <Route exact path='/product/edit/:id' element={<ProductEdit  getApi={getApi} />} />
+          <Route exact path='/product/buy/:id' element={<ProductDetails  />} />
           <Route exact path='*' element={<Error404 />} />
         </Routes>
       </main>
