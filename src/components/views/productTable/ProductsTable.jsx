@@ -3,7 +3,7 @@ import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Product from "./Product/Product";
 
-const ProductsTable = ({ products, URL, getApi }) => {
+const ProductsTable = ({ products, getApi }) => {
   return (
     <div>
       <Container className="py-5">
@@ -33,9 +33,8 @@ const ProductsTable = ({ products, URL, getApi }) => {
           <tbody>
             {products?.map((product) => (
               <Product
-                key={product._id}
+                key={product?.id}
                 product={product}
-                URL={URL}
                 getApi={getApi}
               />
             ))}
