@@ -19,17 +19,18 @@ const Product = ({ product, getApi }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          //la petición delete con fetch
-          /* const res = await fetch(`${URL}/${id}`, {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+           /*  const res = await fetch(`${URL}/${id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
           }); */
 
-          //la petición con axios
-
-          const res = await axios.delete(`${URL}/${id}`);
+          const res = await axios.delete(`${URL}/${id}`, {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+                .token,
+            },
+          });
 
           console.log(res);
           if (res.status === STATUS.STATUS_OK) {

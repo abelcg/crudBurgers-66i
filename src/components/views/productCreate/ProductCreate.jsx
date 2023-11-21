@@ -80,16 +80,21 @@ const ProductCreate = ({ URL, getApi }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          //la petición post usando fetch
-          /* const res = await fetch(URL, {
-            method: 'POST',
+           /* const res = await fetch(URL, {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token")).token
             },
             body: JSON.stringify(newProduct),
           }); */
-
-          const res = await axios.post(URL, newProduct);
+          const res = await axios.post(URL, newProduct, {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+                .token,
+            },
+          });
 
           console.log(res);
 
